@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>"Lab 7: HTML and CSS Basics"</head>
+<style>
+    body {
+        background-color: hsl(285, 39%, 77%);
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 2em;
+        color: black;
+    }
+
+    p {
+        font-size: 1em;
+        line-height: 1.5;
+    }
+
+    ul,
+    li {
+        padding: 5x;
+        background-color: #ddd;
+
+    }
+</style>
+
+<body>
+    <h1>"Welcome to HTML and CSS Basics"</h1>
+    <p>Today we are going to learn about programming languages.</p>
+    <ul id="listitem">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+    </ul>
+   
+    <button id="changeColorButton">Change Background</button>
+<script>
+    function changeBackground() {
+        document.body.style.backgroundColor = "#c786b6";
+    }
+    // event listener
+    document.getElementById("changeColorButton").addEventListener("click", changeBackground);
+</script>
+
+
+<button id="addItem">add something</button>
+<script>
+    let itemcount = 0;
+function addItem() {
+    itemcount++;
+    const listItem= document.getElementById('listitem');
+    const newItem = document.createElement('li');
+    newItem.textContent = `item ${itemcount}`;
+    listItem.appendChild(newItem);
+} 
+     document.getElementById("addItem").addEventListener("click", addItem);
+    </script>   
+</body>
+</html>
